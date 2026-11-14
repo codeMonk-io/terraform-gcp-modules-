@@ -1,15 +1,15 @@
 
 output "bucket_name" {
   description = "Name of the created bucket"
-  value       = google_storage_bucket.main.name
+  value       = google_storage_bucket.terraform_state.name
 }
 
 output "bucket_url" {
   description = "URL of the GCS bucket"
-  value       = google_storage_bucket.main.url
+  value       = google_storage_bucket.terraform_state.url
 }
 
 output "bucket_self_link" {
   description = "Self link of the GCS bucket"
-  value       = google_storage_bucket.main.self_link
+  value       = google_storage_bucket.terraform_state.self_link
 }
