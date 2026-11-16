@@ -7,10 +7,7 @@ variable "vm_name1" {
   description = "The name of the Compute Engine instance"
   type        = string
 }
-variable "vm_name2" {
-  description = "The name of the Compute Engine instance"
-  type        = string
-}
+
 
 variable "machine_type" {
   description = "The machine type of the Compute Engine instance"
