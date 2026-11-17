@@ -12,3 +12,18 @@ resource "google_compute_subnetwork" "subnet" {
   network       = google_compute_network.vpc.id
   project       = var.project_id
 }
+
+resource "google_compute_firewall" "allow_internal_ssh" {
+  name      = "allow-internal-ssh"
+  project   = var.project_id
+  network = google_compute_network.vpc.id
+  direction = "INGRESS"
+
+  source_ranges = ["10.0.1.0/24"]
+  target_tags   = ["allow-iap-ssh"]
+
+  allow {
+    protocol = "tcp"
+    ports    = ["22"]
+  }
+}
