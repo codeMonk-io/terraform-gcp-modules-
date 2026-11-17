@@ -31,15 +31,18 @@ variable "bucket_member" {
 
 variable "target_service_account_email" {
   description = "The target service account whose IAM policy will be modified."
+  default = "null"
   type        = string
 }
 
 variable "service_account_role" {
   description = "The IAM role granted on the target service account."
+  default = "null"
   type        = string
 }
 
 variable "service_account_member" {
   description = "The principal receiving access to the target service account."
+  default     = "null"
   type        = string
 }
