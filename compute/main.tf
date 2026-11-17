@@ -11,6 +11,11 @@ resource "google_compute_instance" "my_vm1" {
       image = "debian-cloud/debian-12"
     }
   }
+  lifecycle {
+  ignore_changes = [
+    metadata["ssh-keys"]
+  ]
+}
 
   network_interface {
     subnetwork = var.subnetwork
