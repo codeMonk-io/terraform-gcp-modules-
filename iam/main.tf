@@ -10,8 +10,8 @@ resource "google_storage_bucket_iam_member" "bucket_access" {
   member = var.bucket_member
 }
 
-resource "google_service_account_iam_member" "service_account_access" {
-  service_account_id = var.target_service_account_email
-  role               = var.service_account_role
-  member             = var.service_account_member
-}
+# resource "google_service_account_iam_member" "service_account_access" {
+#   service_account_id = var.target_service_account_email
+#   role               = var.service_account_role
+#   member             = var.service_account_member
+# }

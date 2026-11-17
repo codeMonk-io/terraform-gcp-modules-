@@ -9,7 +9,7 @@ output "bucket_iam_member" {
   value       = google_storage_bucket_iam_member.bucket_access.member
 }
 
-output "service_account_iam_member" {
-  description = "Service-account-level IAM binding."
-  value       = google_service_account_iam_member.service_account_access.member
-}
+# output "service_account_iam_member" {
+#   description = "Service-account-level IAM binding."
+#   value       = google_service_account_iam_member.service_account_access.member
+# }
